@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+   
+</head>
+<style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        background-color: #ff4040; 
+        color: #fff; 
+    }
+
+    .left-sidebar, .right-sidebar {
+        width: 20%; 
+        background-color: #fff; 
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content {
+        flex: 1; 
+        padding: 20px;
+    }
+
+    h1, h2 {
+        font-size: 2em; 
+        font-weight: bold;
+        margin-bottom: 20px; 
+    }
+
+    form {
+        background-color: #fff; 
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: #4caf50; 
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        color: #000; 
+    }
+
+    li {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        color: #000;
+    }
+
+
+    .left-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-sidebar .logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px; 
+    }
+
+    .left-sidebar .contact-details {
+        text-align: center;
+        margin-top: 20px;
+        color: #000; 
+    }
+
+    .left-sidebar .contact-details h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+
+    /* Animations for the contact details in the left sidebar */
+    .left-sidebar .contact-details,
+    .right-sidebar h2,
+    .right-sidebar p {
+    
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .left-sidebar:hover .contact-details,
+    .right-sidebar:hover h2,
+    .right-sidebar:hover p {
+        
+        transform: translateY(0);
+    }
+
+    /* Animations for the main content in the center */
+    .main-content {
+        
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    .main-content:hover {
+    
+        transform: translateY(0);
+    }
+
+
+    ul:hover li {
+        
+        transform: translateY(0);
+    }
+    form {
+    background-color: #fff;
+    padding: 10px; /* Reduce form size */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 10px; /* Separate form from notes */
+    }
+
+    input[type="text"] {
+    width: 50%; 
+    padding: 8px; 
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    }
+
+    button {
+    padding: 8px 12px; 
+    font-size: 14px; 
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+
+
+    .right-sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-sidebar .logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px; 
+    }
+    /* Bouncing animation for the logo */
+    .logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        animation: bounce 0.5s infinite alternate;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* Animations for the main content in the center */
+    .main-content {
+        transform: scale(0.8);
+        animation: fadeInUp 1s forwards;
+    }
+
+    @keyframes fadeInUp {
+        to {
+        
+            transform: scale(1);
+        }
+    }
+</style>
+
+<body>
+    <div class="left-sidebar">
+        <img class="logo" src="C:\\Users\\svani\\Downloads\\Innomatics_Task4\\note_taking_app\\logo.jpg" alt="Logo">
+        <h2>Contact Details</h2>
+        <div class="contact-details">
+            <h1><span style="font-weight: bold;">Name:</span></h1>
+            <p style="font-weight: bold;">S DINESH KUMAR</p>
+    
+            <h5>Gmail: svani4830@gmail.com</h5>
+            <p>
+                <a href="mailto:svani4830@gmail.com" target="_blank">
+                    <img src="C:\\Users\\svani\\Downloads\\Innomatics_Task4\\note_taking_app\\Gmaillogo.png" alt="Gmail Logo" style="width: 20px; height: auto;">
+                </a>
+            </p>
+            <h5>GitHub:</h5>
+            <p>
+                <a href="https://github.com/SDineshKumar1304" target="_blank">
+                    <img src="C:\\Users\\svani\\Downloads\\Innomatics_Task4\\note_taking_app\\logogithub.png" alt="GitHub Logo" style="width: 20px; height: auto;">
+                </a>
+            </p>
+    
+            <h5>LinkedIn:</h5>
+            <p>
+                <a href="https://www.linkedin.com/in/s-dinesh-kumar2004/" target="_blank">
+                    <img src="C:\\Users\\svani\\Downloads\\Innomatics_Task4\\note_taking_app\\logolinkedin.png" alt="LinkedIn Logo" style="width: 20px; height: auto;">
+                </a>
+            </p>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>INNOMATICS RESEARCH LABS PROJECT</h1>
+        <h2>Notes Taking App</h2>
+        
+        <form method="POST" action="/">
+            <input type="text" name="note" placeholder="Enter a note">
+            <button type="submit">Note Down</button>
+        </form>
+        
+        <form method="POST" action="/delete/all">
+            <button type="submit" class="delete-all-button">Delete All</button>
+        </form>
+        
+        <ul>
+            {% for note in notes %}
+                <li>
+                    {{ note }}
+                    <form method="POST" action="/delete/{{ loop.index }}">
+                        <button type="submit" class="delete-button">Delete</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        <button onclick="printNotes()">Print Notes</button>
+    </div>
+    <div class="right-sidebar">
+        <img class="logo" src="C:\\Users\\svani\\Downloads\\Innomatics_Task4\\note_taking_app\\Noteslogo.jpg" alt="Right Sidebar Logo">
+        <h2>Right Sidebar</h2>
+        <p>Right sidebar content goes here.</p>
+    </div>
+    <script>
+        function printAllNotes() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
